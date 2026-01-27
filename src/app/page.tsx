@@ -112,9 +112,9 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="mb-6 inline-flex"
             >
-              <Badge variant="primary" size="md">
-                <span className="mr-1">🇸🇬</span>
-                {t.home.badge}
+              <Badge variant="primary" size="md" className="whitespace-nowrap">
+                <span className="mr-1 inline-block">🇸🇬</span>
+                <span className="inline-block">{t.home.badge}</span>
               </Badge>
             </motion.div>
             <motion.div
@@ -129,12 +129,11 @@ export default function Home() {
             {/* Main Heading */}
             <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               <span className="text-white">{t.home.title}</span>
-              <br />
               <span className="text-gradient">{t.home.titleHighlight}</span>
             </h1>
 
             {/* Subheading */}
-            <p className="mx-auto mb-10 max-w-3xl text-lg font-bold text-white lg:text-xl leading-relaxed">
+            <p className="mx-auto mb-10 max-w-3xl text-lg font-bold text-white lg:text-xl leading-relaxed break-words">
               {t.home.subtitle}
             </p>
 
@@ -171,10 +170,10 @@ export default function Home() {
           >
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-gradient lg:text-4xl">
+                <div className="text-3xl font-bold text-gradient lg:text-4xl whitespace-nowrap">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-sm text-[var(--color-text-muted)]">
+                <div className="mt-1 text-sm text-[var(--color-text-muted)] break-words">
                   {stat.label}
                 </div>
               </div>
@@ -195,7 +194,7 @@ export default function Home() {
             <Badge variant="secondary" size="md" className="mb-4">
               {t.home.services.title}
             </Badge>
-            <h2 className="mb-4 text-3xl font-bold text-white lg:text-4xl">
+            <h2 className="mb-4 text-3xl font-bold text-white lg:text-4xl break-words">
               {t.home.services.subtitle}
             </h2>
           </motion.div>
@@ -207,19 +206,19 @@ export default function Home() {
                   <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-white">
                     {service.icon}
                   </div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <CardTitle>{service.title}</CardTitle>
-                    <Badge variant="primary" size="sm">{service.badge}</Badge>
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
+                    <CardTitle className="whitespace-nowrap">{service.title}</CardTitle>
+                    <Badge variant="primary" size="sm" className="whitespace-nowrap flex-shrink-0">{service.badge}</Badge>
                   </div>
-                  <p className="text-sm text-[var(--color-text-dim)] mb-2">{service.subtitle}</p>
+                  <p className="text-sm text-[var(--color-text-dim)] mb-2 break-words">{service.subtitle}</p>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[var(--color-text-muted)] mb-4">
+                  <CardDescription className="text-[var(--color-text-muted)] mb-4 break-words">
                     {service.description}
                   </CardDescription>
-                  <Link href="/products" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary-light)] transition-colors inline-flex items-center gap-1">
-                    {service.link}
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <Link href="/products" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary-light)] transition-colors inline-flex items-center gap-1 whitespace-nowrap">
+                    <span>{service.link}</span>
+                    <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -239,7 +238,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold text-white lg:text-4xl">
+            <h2 className="mb-4 text-3xl font-bold text-white lg:text-4xl break-words">
               {t.home.advantages.title}
             </h2>
           </motion.div>
@@ -254,7 +253,7 @@ export default function Home() {
                   <CardTitle>{advantage.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[var(--color-text-muted)]">
+                  <CardDescription className="text-[var(--color-text-muted)] break-words">
                     {advantage.description}
                   </CardDescription>
                 </CardContent>
@@ -276,12 +275,12 @@ export default function Home() {
               <Badge variant="secondary" size="md" className="mb-4">
                 {t.home.about.badge}
               </Badge>
-              <h2 className="mb-6 text-3xl font-bold text-white lg:text-4xl">
+              <h2 className="mb-6 text-3xl font-bold text-white lg:text-4xl break-words">
                 {t.home.about.title}
               </h2>
               <div className="space-y-4 text-[var(--color-text-muted)]">
-                <p>{t.home.about.paragraph1}</p>
-                <p>
+                <p className="break-words">{t.home.about.paragraph1}</p>
+                <p className="break-words">
                   {t.home.about.paragraph2.includes(':') ? (
                     <>
                       <strong className="text-white">{t.home.about.paragraph2.split(':')[0]}: </strong>
@@ -291,7 +290,7 @@ export default function Home() {
                     t.home.about.paragraph2
                   )}
                 </p>
-                <p>
+                <p className="break-words">
                   {t.home.about.paragraph3.includes(':') ? (
                     <>
                       <strong className="text-white">{t.home.about.paragraph3.split(':')[0]}: </strong>
@@ -320,10 +319,10 @@ export default function Home() {
               {aboutStats.map((stat, index) => (
                 <Card key={index} variant="default" className="text-center">
                   <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-gradient mb-2">
+                    <div className="text-4xl font-bold text-gradient mb-2 whitespace-nowrap">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-[var(--color-text-muted)]">
+                    <div className="text-sm text-[var(--color-text-muted)] break-words">
                       {stat.label}
                     </div>
                   </CardContent>
@@ -339,15 +338,15 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <Card variant="gradient" glow className="text-center">
             <div className="py-8">
-              <h2 className="mb-4 text-2xl font-bold text-white lg:text-3xl">
+              <h2 className="mb-4 text-2xl font-bold text-white lg:text-3xl break-words">
                 {t.home.cta.title}
               </h2>
-              <p className="mb-6 text-[var(--color-text-muted)]">
+              <p className="mb-6 text-[var(--color-text-muted)] break-words">
                 {t.home.cta.subtitle}
               </p>
               <div className="mb-8 text-sm text-[var(--color-text-dim)]">
-                <p className="mb-2">{t.home.cta.industries}</p>
-                <p>{t.home.cta.features}</p>
+                <p className="mb-2 break-words">{t.home.cta.industries}</p>
+                <p className="break-words">{t.home.cta.features}</p>
               </div>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link href="/contact">
@@ -362,10 +361,10 @@ export default function Home() {
                 </Link>
               </div>
               <div className="mt-8 pt-8 border-t border-white/10">
-                <p className="text-sm text-[var(--color-text-dim)]">
+                <p className="text-sm text-[var(--color-text-dim)] break-words">
                   {t.home.cta.location}
                 </p>
-                <p className="text-xs text-[var(--color-text-dim)] mt-1">
+                <p className="text-xs text-[var(--color-text-dim)] mt-1 break-words">
                   {t.home.cta.tagline}
                 </p>
               </div>
