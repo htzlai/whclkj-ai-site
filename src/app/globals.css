@@ -1,0 +1,353 @@
+@import "tailwindcss";
+
+/* ============================================
+   Design System - 畅连科技 生态绿青蓝主题
+   ============================================ */
+
+:root {
+  /* Primary Colors - 生态绿色系 */
+  --color-primary: #059669;
+  --color-primary-light: #10b981;
+  --color-primary-dark: #047857;
+  
+  /* Accent Colors - 青蓝色系 */
+  --color-accent: #0891b2;
+  --color-accent-light: #22d3ee;
+  --color-accent-dark: #0e7490;
+  
+  /* Secondary - 蓝绿渐变 */
+  --color-secondary: #14b8a6;
+  
+  /* Background Colors - 深邃青绿 */
+  --color-bg-dark: #042f2e;
+  --color-bg-darker: #021716;
+  --color-bg-card: #0d3d3b;
+  --color-bg-card-hover: #115e5a;
+  
+  /* Text Colors */
+  --color-text: #f0fdfa;
+  --color-text-muted: #99f6e4;
+  --color-text-dim: #5eead4;
+  
+  /* Border Colors */
+  --color-border: rgba(153, 246, 228, 0.2);
+  --color-border-hover: rgba(153, 246, 228, 0.4);
+  
+  /* Gradient definitions - 生态渐变 */
+  --gradient-primary: linear-gradient(135deg, #059669 0%, #0891b2 50%, #14b8a6 100%);
+  --gradient-hero: linear-gradient(180deg, #042f2e 0%, #0d3d3b 50%, #021716 100%);
+  --gradient-glow: radial-gradient(ellipse 150% 120% at top, rgba(16, 185, 129, 0.15) 0%, rgba(8, 145, 178, 0.1) 50%, transparent 80%);
+  --gradient-card: linear-gradient(145deg, rgba(13, 61, 59, 0.8) 0%, rgba(4, 47, 46, 0.9) 100%);
+  
+  /* Shadows - 生态光晕 */
+  --shadow-glow: 0 0 60px rgba(16, 185, 129, 0.15), 0 0 120px rgba(8, 145, 178, 0.1);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(153, 246, 228, 0.05);
+  --shadow-button: 0 4px 20px rgba(5, 150, 105, 0.4);
+  
+  /* Animation timing */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Font settings */
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Tailwind Theme Inline */
+@theme inline {
+  --color-background: var(--color-bg-dark);
+  --color-foreground: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--gradient-hero);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 生态装饰背景 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-glow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* ============================================
+   Custom Utility Classes
+   ============================================ */
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.glass {
+  background: rgba(13, 61, 59, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(153, 246, 228, 0.1);
+}
+
+/* Card styles */
+.card-eco {
+  background: var(--gradient-card);
+  border: 1px solid rgba(153, 246, 228, 0.1);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+}
+
+.card-eco:hover {
+  transform: translateY(-4px);
+  border-color: rgba(153, 246, 228, 0.2);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all var(--transition-normal);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-card-hover);
+}
+
+/* Eco button */
+.btn-eco {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-button);
+  transition: all var(--transition-normal);
+}
+
+.btn-eco:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(5, 150, 105, 0.5);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(8, 145, 178, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.5), 0 0 80px rgba(8, 145, 178, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ============================================
+   Eco Decorations
+   ============================================ */
+
+.eco-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.eco-blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.eco-blob-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.4) 0%, transparent 70%);
+  bottom: -50px;
+  right: -50px;
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+/* ============================================
+   Focus States
+   ============================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Selection
+   ============================================ */
+
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: var(--color-text);
+}
