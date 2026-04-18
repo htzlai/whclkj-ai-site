@@ -9,7 +9,7 @@ const timelineZh = [
   {
     year: '2016',
     title: '公司成立',
-    description: '武汉畅连科技有限公司在武汉正式成立，开启IT服务创业之路。',
+    description: '重庆硕之达科技有限公司在重庆正式成立，开启IT服务创业之路。',
   },
   {
     year: '2018',
@@ -132,7 +132,7 @@ export default function AboutPage() {
     zh: {
       badge: '关于我们',
       title: '畅连科技，智联未来',
-      subtitle: '武汉畅连科技有限公司是一家专业的IT服务企业，专注于为政府机关、企事业单位提供优质的信息化解决方案。',
+      subtitle: '重庆硕之达科技有限公司是一家专业的IT服务企业，专注于为政府机关、企事业单位提供优质的信息化解决方案。',
       missionTitle: '我们的使命',
       mission: '以客户为中心，以技术为根本，以服务为保障。致力于成为中部地区最具影响力的IT服务商，帮助每一位客户实现数字化转型，畅连智慧未来。',
       journeyTitle: '发展历程',

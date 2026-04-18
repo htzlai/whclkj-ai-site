@@ -153,11 +153,11 @@ export const translations: Record<Language, Translations> = {
       getStarted: '获取方案',
     },
     home: {
-      badge: '武汉 · 智慧IT服务',
+      badge: '重庆 · 智慧IT服务',
       badgeSubtitle: 'Smart IT Solutions',
       title: '畅连科技',
       titleHighlight: '· 智联未来',
-      subtitle: '武汉畅连科技有限公司是一家专注于智慧IT解决方案的高新技术企业，致力于为政府、企业提供网络建设、系统集成、软件开发、IT运维等一站式信息化服务',
+      subtitle: '重庆硕之达科技有限公司是一家专注于智慧IT解决方案的高新技术企业，致力于为政府、企业提供网络建设、系统集成、软件开发、IT运维等一站式信息化服务',
       ctaPrimary: '了解解决方案',
       ctaSecondary: '联系我们',
       stats: {
@@ -224,7 +224,7 @@ export const translations: Record<Language, Translations> = {
       about: {
         badge: '关于畅连',
         title: '专业IT服务，畅连未来',
-        paragraph1: '武汉畅连科技有限公司位于武汉，是一家专业的IT服务企业，专注于为政府机关、企事业单位提供优质的信息化解决方案。',
+        paragraph1: '重庆硕之达科技有限公司位于重庆，是一家专业的IT服务企业，专注于为政府机关、企事业单位提供优质的信息化解决方案。',
         paragraph2: '公司秉承"专业、高效、创新、共赢"的经营理念，以客户需求为导向，以技术创新为驱动，持续为客户创造价值。',
         paragraph3: '我们拥有一支经验丰富的技术团队，具备网络工程、系统集成、软件开发、IT运维等多领域专业能力，是您值得信赖的IT合作伙伴。',
         learnMore: '了解更多',
@@ -247,7 +247,7 @@ export const translations: Record<Language, Translations> = {
         features: '网络建设 · 系统集成 · 云计算 · IT运维 · 软件开发',
         primary: '获取解决方案',
         secondary: '了解更多',
-        location: '武汉 · 智慧IT服务商',
+        location: '重庆 · 智慧IT服务商',
         tagline: '专业服务 · 技术领先 · 值得信赖',
       },
     },
@@ -281,7 +281,7 @@ export const translations: Record<Language, Translations> = {
           cookies: 'Cookie政策',
         },
       },
-      copyright: '武汉畅连科技有限公司',
+      copyright: '重庆硕之达科技有限公司',
     },
   },
   en: {

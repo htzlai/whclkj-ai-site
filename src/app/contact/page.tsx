@@ -17,8 +17,8 @@ const contactInfoZh = [
       </svg>
     ),
     label: '电子邮箱',
-    value: 'contact@whclkj.com',
-    href: 'mailto:contact@whclkj.com',
+    value: 'postmaster@cqszd.cn',
+    href: 'mailto:postmaster@cqszd.cn',
   },
   {
     icon: (
@@ -27,8 +27,8 @@ const contactInfoZh = [
       </svg>
     ),
     label: '联系电话',
-    value: '027-XXXXXXXX',
-    href: 'tel:027XXXXXXXX',
+    value: '023-XXXXXXXX',
+    href: 'tel:023XXXXXXXX',
   },
   {
     icon: (
@@ -38,7 +38,7 @@ const contactInfoZh = [
       </svg>
     ),
     label: '公司地址',
-    value: '武汉市洪山区光谷软件园',
+    value: '重庆西永微电子产业园区',
     href: '#',
   },
 ];
@@ -51,8 +51,8 @@ const contactInfoEn = [
       </svg>
     ),
     label: 'Email',
-    value: 'contact@whclkj.com',
-    href: 'mailto:contact@whclkj.com',
+    value: 'postmaster@cqszd.cn',
+    href: 'mailto:postmaster@cqszd.cn',
   },
   {
     icon: (
@@ -61,8 +61,8 @@ const contactInfoEn = [
       </svg>
     ),
     label: 'Phone',
-    value: '027-XXXXXXXX',
-    href: 'tel:027XXXXXXXX',
+    value: '023-XXXXXXXX',
+    href: 'tel:023XXXXXXXX',
   },
   {
     icon: (
@@ -72,7 +72,7 @@ const contactInfoEn = [
       </svg>
     ),
     label: 'Location',
-    value: 'Optics Valley Software Park, Hongshan District, Wuhan',
+    value: 'Chongqing Xiyong Microelectronics Industrial Park',
     href: '#',
   },
 ];

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "武汉畅连科技有限公司 - 智慧IT解决方案",
-  description: "武汉畅连科技有限公司专注于智慧IT解决方案，为政府、企业提供网络建设、系统集成、软件开发、IT运维等一站式信息化服务。",
-  keywords: ["IT服务", "网络建设", "系统集成", "云计算", "IT运维", "软件开发", "武汉", "智慧IT"],
+  title: "重庆硕之达科技有限公司 - 智慧IT解决方案",
+  description: "重庆硕之达科技有限公司专注于智慧IT解决方案，为政府、企业提供网络建设、系统集成、软件开发、IT运维等一站式信息化服务。",
+  keywords: ["IT服务", "网络建设", "系统集成", "云计算", "IT运维", "软件开发", "重庆", "智慧IT"],
 };
 
 export default function RootLayout({
